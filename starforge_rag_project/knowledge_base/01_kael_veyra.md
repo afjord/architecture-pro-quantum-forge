@@ -1,0 +1,9 @@
+# Kael Veyra
+
+Kael Veyra grew up on the desert world of Kharos IV, far from the political center of Aurion Prime. He was raised by relatives who wanted him to live a practical life repairing moisture rigs and cargo skiffs, but he dreamed of flight, distant worlds, and a purpose larger than the farm. Those early years shaped his character: he learned patience from manual labor, resourcefulness from scarcity, and moral courage from seeing ordinary people survive harsh conditions.
+
+His life changed when he encountered Master Oryn Voss, a wandering Aether Knight who recognized a strong affinity for the Aether in the young pilot. Oryn introduced Kael to the old teachings of the Aether Knights and revealed the truth about Kael’s family. Kael learned that his father, Aren Veyra, had once been a gifted defender of the Stellar Republic before falling under the influence of Emperor Malrec and becoming the feared Xarn Velgor. This revelation gave Kael both a burden and a mission.
+
+Kael joined the Free Systems League as a pilot and quickly became central to its struggle against the Helion Dominion. He flew missions in a Raptor-wing starfighter, assisted by the automaton R-2Q, and helped destroy the Void Core during the Battle of Ardent Gate. That victory transformed him from an unknown desert pilot into a symbol of resistance across many star systems.
+
+Although Kael became known for heroism in battle, his deeper journey was spiritual. He trained with Grand Sage Yorin on the swamp world of Mirefen and learned that the Aether could not be mastered through anger alone. Kael’s greatest challenge was not defeating the Dominion in combat but deciding whether a person consumed by the Umbral Path could still return to the Luminous Path. His refusal to abandon that hope would eventually change the fate of the galaxy.
