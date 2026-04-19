@@ -217,8 +217,8 @@ production-систем.
 
 ```bash
 pip install langchain sentence-transformers faiss-cpu scikit-learn numpy
-python task3_indexing/build_index.py
-python task3_indexing/search_demo.py
+python build_index.py
+python search_demo.py
 ```
 
 # Задание 4. Реализация RAG-бота с техниками промптинга
