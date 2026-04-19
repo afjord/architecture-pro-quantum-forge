@@ -1,0 +1,4 @@
+faiss-cpu
+python-telegram-bot>=21.9
+requests
+sentence-transformers
