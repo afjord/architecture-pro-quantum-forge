@@ -15,7 +15,7 @@ CHUNK_SIZE_WORDS = 180
 CHUNK_OVERLAP_WORDS = 40
 
 BASE_DIR = Path(__file__).resolve().parent
-PROJECT_ROOT = BASE_DIR.parent
+PROJECT_ROOT = BASE_DIR
 KB_DIR = PROJECT_ROOT / "knowledge_base"
 OUT_DIR = BASE_DIR / "artifacts"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
