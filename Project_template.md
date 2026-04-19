@@ -212,3 +212,56 @@ production-систем.
 Для индексации выбран FAISS, так как он прост в интеграции, быстро работает и хорошо подходит для MVP RAG-системы.
 
 Генерация заняла 12.042 с.
+
+## Как запускать
+
+```bash
+pip install langchain sentence-transformers faiss-cpu scikit-learn numpy
+python task3_indexing/build_index.py
+python task3_indexing/search_demo.py
+```
+
+# Задание 4. Реализация RAG-бота с техниками промптинга
+
+## Установка
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+### Требуемые файлы:
+
+Place these files in `ARTIFACTS_DIR` (default: `artifacts/`):
+- `faiss.index`
+- `chunks_metadata.json`
+
+### Ollama
+
+Убедитесь, что Ollama запущена локально и модель скачана:
+
+```bash
+ollama pull llama3
+curl http://localhost:11434/api/tags
+```
+
+Локальный API Ollama доступен по адресу `http://localhost:11434/api` по умолчанию.
+
+### Telegram
+
+Создайте Telegram бот с помочью BotFather и установите переменную окружения:
+
+```bash
+export TELEGRAM_BOT_TOKEN="..."
+```
+
+## Запуск
+
+```bash
+python rag_telegram_bot.py
+```
+
+Примеры успешных диалогов:
+
+![Диалог с ботом](task4.png)
