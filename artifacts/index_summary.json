@@ -8,5 +8,5 @@
   "embedding_backend": "sentence-transformers",
   "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
   "embedding_dim": 384,
-  "generation_time_seconds": 14.651
+  "generation_time_seconds": 9.28
 }
