@@ -341,7 +341,8 @@ Context:
 
 ## Пример лога
 
-Первым этапом была выполнена синхронизация без добавления новых файлов в базу знаний. После этого был добавлен файл в базу знаний и вызван `update_index.py` для демонстрации его работы.
+Первым этапом была выполнена синхронизация без добавления новых файлов в базу знаний. После этого был добавлен файл в
+базу знаний и вызван `update_index.py` для демонстрации его работы.
 
 [Лог](logs/update_index.log)
 
@@ -383,5 +384,78 @@ Update --> Summary : write index summary
 Update --> Manifest : save new hashes
 Update --> LogFile : write process log
 Cron --> CronLog : stdout/stderr
+@enduml
+```
+
+# Задание 7. Аналитика покрытия и качества базы знаний
+
+## Итоги анализа 
+
+В базу знаний были искусственно внесены пробелы: удалены сущности `Xarn Velgor`, `Kharos IV` и `Aether`.
+
+В ходе автоматической проверки на "золотой набор" вопросов были выявлены следующие проблемы:
+
+- Бот не отвечает на вопросы по удалённым сущностям, за одним исключением.
+- При отсутствии нужного документа бот корректно отвечает `I don't know.`.
+- Невзирая на удаление ключевой сущности `Xarn Velgor` бот смог получить релевантную информацию о том, кто это такой.
+  Предполагаю, что боту было достаточно косвенной информации в других статьях.
+
+## Выявленные пробелы
+
+Плохо покрытые темы:
+
+- `Luminous Path?`.
+- `Kharos IV`
+- `Darth Veider`
+
+Количество выявленных пробелов: 3
+
+## Рекомендации
+
+- Вернуть или пересоздать документы по удалённым ключевым сущностям.
+- Расширить статьи по основным концепциям мира.
+- Добавить больше документов по технологиям, артефактам и политическим структурам.
+- Использовать golden set как регрессионную проверку после каждого обновления индекса.
+
+
+```puml
+@startuml
+title RAG evaluation with golden questions
+
+actor Evaluator
+participant "evaluate.py" as Eval
+participant "RagEngine" as Engine
+database "FAISS Index" as Faiss
+collections "chunks_metadata.json" as Meta
+participant "LLM / Ollama" as LLM
+participant "logs.jsonl" as Logs
+participant "evaluation_summary.json" as Summary
+
+Evaluator -> Eval : run evaluation
+Eval -> Eval : load golden_questions.json
+
+loop for each golden question
+  Eval -> Engine : answer(question)
+  Engine -> Faiss : search(query_embedding)
+  Faiss --> Engine : top chunks
+  Engine -> Meta : load chunk texts
+  Meta --> Engine : context
+  Engine -> LLM : prompt(context, question)
+  LLM --> Engine : answer
+  Engine --> Eval : result
+  Eval -> Logs : append log record
+end
+
+Eval -> Eval : compare actual vs expected
+Eval -> Summary : save metrics
+
+note right of Engine
+Possible failures:
+- empty index
+- low relevance chunks
+- removed entity
+- invalid chunk text
+- LLM returns malformed answer
+end note
 @enduml
 ```
