@@ -288,6 +288,7 @@ python rag_telegram_bot.py
 ![Часть 2](img/task5_2_safe_mode.png)
 
 Для отключения защит пришлось явно увалить все типы защиты и предельно упростить промт до следующего вида:
+
 ```text
 Answer the question using the context.
 
@@ -300,3 +301,87 @@ Context:
 
 Это позволило продемонстрировать prompt injection (в первой половине скриншота):
 ![Часть 1](img/task5_3_safe_and_not_safe_mode.png)
+
+# Задание 6. Автоматическое ежедневное обновление базы знаний
+
+## Цель
+
+Для RAG-бота реализовано автоматическое обновление базы знаний. Новые и
+изменённые документы попадают в индекс без ручной пересборки.
+
+## Источник данных
+
+Используется локальная папка: `knowledge_base/`
+
+Скрипт: сканирует документы ➡ сравнивает хеши ➡ пересобирает индекс при изменениях
+
+## Логика обновления
+
+1. Сканирование файлов
+2. Сравнение с `manifest.json`
+3. Пересборка чанков и эмбеддингов
+4. Обновление FAISS индекса
+5. Логирование
+
+## Общий код
+
+Используется модуль `index_utils.py` для: чанков, эмбеддингов, сохранения индекса. Это гарантирует одинаковое поведение
+`build_index.py` и `update_index.py`.
+
+## Cron
+
+Пример запуска ежедневно в 06:00:
+
+```shell
+0 6 * * * cd /path/to/project && .venv/bin/python update_index.py >> logs/cron.log 2>&1
+```
+
+Для выполнения команды необходимо заменить `/path/to/project`, `.venv/bin/python` и `update_index.py` на актуальные
+пути.
+
+## Пример лога
+
+Первым этапом была выполнена синхронизация без добавления новых файлов в базу знаний. После этого был добавлен файл в базу знаний и вызван `update_index.py` для демонстрации его работы.
+
+[Лог](logs/update_index.log)
+
+## Диаграмма с потоком данных:
+
+```plantuml
+@startuml
+title Daily update of Star Forge RAG knowledge base
+
+actor "cron\n(daily at 06:00)" as Cron
+
+folder "knowledge_base/" as KB
+file "build_index.py" as Build
+file "update_index.py" as Update
+file "index_utils.py" as Utils
+
+rectangle "Chunking" as Chunking
+rectangle "Embeddings\nall-MiniLM-L6-v2" as Embeddings
+
+database "FAISS index\nartifacts/faiss.index" as Faiss
+file "artifacts/chunks_metadata.json" as Metadata
+file "artifacts/index_summary.json" as Summary
+file "artifacts/manifest.json" as Manifest
+file "logs/update_index.log" as LogFile
+file "logs/cron.log" as CronLog
+
+Cron --> Update : run daily
+KB --> Update : scan .md documents
+Manifest --> Update : compare hashes
+
+Update --> Utils : reuse indexing logic
+Build --> Utils : reuse indexing logic
+
+Utils --> Chunking : split into chunks
+Chunking --> Embeddings : generate vectors
+Embeddings --> Faiss : save/update index
+Chunking --> Metadata : save chunk metadata
+Update --> Summary : write index summary
+Update --> Manifest : save new hashes
+Update --> LogFile : write process log
+Cron --> CronLog : stdout/stderr
+@enduml
+```

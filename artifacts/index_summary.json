@@ -1,12 +1,15 @@
 {
   "knowledge_base": "knowledge_base",
-  "documents_count": 35,
-  "chunks_count": 49,
+  "documents_count": 36,
+  "chunks_count": 50,
   "chunk_size_words": 180,
   "chunk_overlap_words": 40,
   "index_artifact": "faiss.index",
+  "changed_files_count": 1,
+  "deleted_files_count": 0,
   "embedding_backend": "sentence-transformers",
   "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
   "embedding_dim": 384,
-  "generation_time_seconds": 9.28
+  "generation_time_seconds": 14.235,
+  "updated_at": "2026-04-20T23:04:43.309662"
 }
