@@ -1,0 +1,191 @@
+{
+  "timestamp": "2026-04-20T20:57:54.049562+00:00",
+  "question": "Who is Emperor Malrec?",
+  "answer": "Emperor Malrec engineered the transformation of the Stellar Republic into the Helion Dominion by exploiting crisis, fear, and institutional fatigue.",
+  "chunks_found": true,
+  "retrieved_count": 3,
+  "sources": [
+    "07_emperor_malrec",
+    "03_lyra_veyra"
+  ],
+  "answer_length": 148,
+  "successful_answer": true,
+  "top_score": 0.5954835414886475,
+  "expected_mode": "answer",
+  "actual_mode": "answer",
+  "passed": true
+}
+{
+  "timestamp": "2026-04-20T20:57:56.561945+00:00",
+  "question": "What is the Void Core?",
+  "answer": "The Void Core was a moon-sized battle station designed to project absolute fear, serving as both a weapon and a political message.",
+  "chunks_found": true,
+  "retrieved_count": 3,
+  "sources": [
+    "24_void_core"
+  ],
+  "answer_length": 130,
+  "successful_answer": true,
+  "top_score": 0.5786961317062378,
+  "expected_mode": "answer",
+  "actual_mode": "answer",
+  "passed": true
+}
+{
+  "timestamp": "2026-04-20T20:57:58.433946+00:00",
+  "question": "What weapon do Aether Knights use?",
+  "answer": "Aether Knights use the Lumen Blade as their traditional weapon.",
+  "chunks_found": true,
+  "retrieved_count": 3,
+  "sources": [
+    "28_lumen_blade",
+    "05_master_oryn_voss"
+  ],
+  "answer_length": 63,
+  "successful_answer": true,
+  "top_score": 0.4794876277446747,
+  "expected_mode": "answer",
+  "actual_mode": "answer",
+  "passed": true
+}
+{
+  "timestamp": "2026-04-20T20:58:01.967299+00:00",
+  "question": "Who is Kael Veyra?",
+  "answer": "Kael Veyra grew up on the desert world of Kharos IV, far from the political center of Aurion Prime. He was raised by relatives who wanted him to live a practical life repairing moisture rigs and cargo skiffs, but he dreamed of flight, distant worlds, and a purpose larger than the farm.",
+  "chunks_found": true,
+  "retrieved_count": 3,
+  "sources": [
+    "01_kael_veyra"
+  ],
+  "answer_length": 286,
+  "successful_answer": true,
+  "top_score": 0.6799838542938232,
+  "expected_mode": "answer",
+  "actual_mode": "answer",
+  "passed": true
+}
+{
+  "timestamp": "2026-04-20T20:58:03.334328+00:00",
+  "question": "What is the Helion Dominion?",
+  "answer": "The Helion Dominion is a symbolic center of power and fear, characterized by industrial production, fortress architecture, and restricted access.",
+  "chunks_found": true,
+  "retrieved_count": 3,
+  "sources": [
+    "17_cindros"
+  ],
+  "answer_length": 145,
+  "successful_answer": true,
+  "top_score": 0.3674914538860321,
+  "expected_mode": "answer",
+  "actual_mode": "answer",
+  "passed": true
+}
+{
+  "timestamp": "2026-04-20T20:58:06.452348+00:00",
+  "question": "Who is Master Oryn Voss?",
+  "answer": "Master Oryn Voss was a calm, perceptive, and patient Aether Knight who represented a model of mentorship based on restraint rather than domination. He was one of the last senior Aether Knights to survive the collapse of the old order.",
+  "chunks_found": true,
+  "retrieved_count": 3,
+  "sources": [
+    "05_master_oryn_voss",
+    "05_master_oryn_voss"
+  ],
+  "answer_length": 234,
+  "successful_answer": true,
+  "top_score": 0.6261063814163208,
+  "expected_mode": "answer",
+  "actual_mode": "answer",
+  "passed": true
+}
+{
+  "timestamp": "2026-04-20T20:58:08.166902+00:00",
+  "question": "What is the Quantum Navigation Core?",
+  "answer": "The Quantum Navigation Core is a highly advanced system used by long-range vessels of the Free Systems League.",
+  "chunks_found": true,
+  "retrieved_count": 3,
+  "sources": [
+    "35_quantum_navigation_core"
+  ],
+  "answer_length": 110,
+  "successful_answer": true,
+  "top_score": 0.7638391256332397,
+  "expected_mode": "answer",
+  "actual_mode": "answer",
+  "passed": true
+}
+{
+  "timestamp": "2026-04-20T20:58:10.783293+00:00",
+  "question": "What is the Aether?",
+  "answer": "The Aether is a mysterious energy or force that permeates the planet Mirefen, rich in biological life and deep currents.",
+  "chunks_found": true,
+  "retrieved_count": 3,
+  "sources": [
+    "19_mirefen",
+    "05_master_oryn_voss"
+  ],
+  "answer_length": 120,
+  "successful_answer": true,
+  "top_score": 0.5098583102226257,
+  "expected_mode": "answer",
+  "actual_mode": "answer",
+  "passed": true
+}
+{
+  "timestamp": "2026-04-20T20:58:13.701800+00:00",
+  "question": "Who is Xarn Velgor?",
+  "answer": "Xarn Velgor was once Aren Veyra, a gifted Aether Knight who fell under Emperor Malrec's influence and became the chief enforcer of the Helion Dominion.",
+  "chunks_found": true,
+  "retrieved_count": 3,
+  "sources": [
+    "01_kael_veyra",
+    "03_lyra_veyra"
+  ],
+  "answer_length": 151,
+  "successful_answer": true,
+  "top_score": 0.4501049518585205,
+  "expected_mode": "unknown",
+  "actual_mode": "answer",
+  "passed": false
+}
+{
+  "timestamp": "2026-04-20T20:58:13.707284+00:00",
+  "question": "What do you know about Kharos IV?",
+  "answer": "I don't know.",
+  "chunks_found": false,
+  "retrieved_count": 0,
+  "sources": [],
+  "answer_length": 13,
+  "successful_answer": false,
+  "top_score": 0.3446010947227478,
+  "expected_mode": "unknown",
+  "actual_mode": "unknown",
+  "passed": true
+}
+{
+  "timestamp": "2026-04-20T20:58:13.713018+00:00",
+  "question": "Who is Darth Vader?",
+  "answer": "I don't know.",
+  "chunks_found": false,
+  "retrieved_count": 0,
+  "sources": [],
+  "answer_length": 13,
+  "successful_answer": false,
+  "top_score": 0.25004470348358154,
+  "expected_mode": "unknown",
+  "actual_mode": "unknown",
+  "passed": true
+}
+{
+  "timestamp": "2026-04-20T20:58:13.717136+00:00",
+  "question": "What is the Luminous Path?",
+  "answer": "I don't know.",
+  "chunks_found": false,
+  "retrieved_count": 0,
+  "sources": [],
+  "answer_length": 13,
+  "successful_answer": false,
+  "top_score": 0.28105056285858154,
+  "expected_mode": "unknown",
+  "actual_mode": "unknown",
+  "passed": true
+}

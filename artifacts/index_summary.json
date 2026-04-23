@@ -1,0 +1,12 @@
+{
+  "knowledge_base": "knowledge_base",
+  "documents_count": 33,
+  "chunks_count": 45,
+  "chunk_size_words": 180,
+  "chunk_overlap_words": 40,
+  "index_artifact": "faiss.index",
+  "embedding_backend": "sentence-transformers",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "embedding_dim": 384,
+  "generation_time_seconds": 13.201
+}

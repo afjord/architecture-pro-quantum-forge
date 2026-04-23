@@ -1,0 +1,50 @@
+[
+  {
+    "question": "Who is Emperor Malrec?",
+    "expected_mode": "answer"
+  },
+  {
+    "question": "What is the Void Core?",
+    "expected_mode": "answer"
+  },
+  {
+    "question": "What weapon do Aether Knights use?",
+    "expected_mode": "answer"
+  },
+  {
+    "question": "Who is Kael Veyra?",
+    "expected_mode": "answer"
+  },
+  {
+    "question": "What is the Helion Dominion?",
+    "expected_mode": "answer"
+  },
+  {
+    "question": "Who is Master Oryn Voss?",
+    "expected_mode": "answer"
+  },
+  {
+    "question": "What is the Quantum Navigation Core?",
+    "expected_mode": "answer"
+  },
+  {
+    "question": "What is the Aether?",
+    "expected_mode": "answer"
+  },
+  {
+    "question": "Who is Xarn Velgor?",
+    "expected_mode": "unknown"
+  },
+  {
+    "question": "What do you know about Kharos IV?",
+    "expected_mode": "unknown"
+  },
+  {
+    "question": "Who is Darth Vader?",
+    "expected_mode": "unknown"
+  },
+  {
+    "question": "What is the Luminous Path?",
+    "expected_mode": "unknown"
+  }
+]

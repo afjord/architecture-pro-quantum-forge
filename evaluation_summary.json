@@ -1,0 +1,18 @@
+{
+  "total_questions": 12,
+  "passed": 11,
+  "failed": 1,
+  "accuracy": 0.917,
+  "failed_cases": [
+    {
+      "question": "Who is Xarn Velgor?",
+      "expected_mode": "unknown",
+      "actual_mode": "answer",
+      "answer": "Xarn Velgor was once Aren Veyra, a gifted Aether Knight who fell under Emperor Malrec's influence and became the chief enforcer of the Helion Dominion.",
+      "sources": [
+        "01_kael_veyra",
+        "03_lyra_veyra"
+      ]
+    }
+  ]
+}
